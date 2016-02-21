@@ -8,6 +8,7 @@ import android.view.MenuItem;
 //change by Mike Eberle2
 
 //change by Joey
+//change by Taylor
 public class MainActivity extends Activity {
 
 	@Override
