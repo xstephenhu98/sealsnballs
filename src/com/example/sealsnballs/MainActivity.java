@@ -10,6 +10,7 @@ import android.view.MenuItem;
 //change by Joey
 //change by Taylor
 //second change by Taylor
+//yay this works as an android project
 public class MainActivity extends Activity {
 
 	@Override
