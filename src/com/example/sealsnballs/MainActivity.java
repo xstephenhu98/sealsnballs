@@ -4,13 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-//First change (Github test)
-//change by Mike Eberle2
 
-//change by Joey
-//change by Taylor
-//second change by Taylor
-//yay this works as an android project
 public class MainActivity extends Activity {
 
 	@Override
