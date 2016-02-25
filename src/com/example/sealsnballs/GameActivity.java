@@ -10,17 +10,17 @@ package com.example.sealsnballs;
 	import android.os.Bundle;
 	import android.view.View;
 
-		public class DrawView  extends Activity {
+		public class GameActivity extends Activity {
 			
-		    Ballmove move;
+		    GameRender render;
 
 		    @Override
 		    public void onCreate(Bundle savedInstanceState) {
 		        super.onCreate(savedInstanceState);
 
-		       move = new Ballmove(this);
-		       move.setBackgroundColor(Color.WHITE);
-		        setContentView(move);
+		       render = new GameRender(this);
+		       render.setBackgroundColor(Color.WHITE);
+		        setContentView(render);
 
 		    }
 		}

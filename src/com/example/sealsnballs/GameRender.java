@@ -8,14 +8,14 @@ import android.graphics.Paint;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class Ballmove extends View {
+public class GameRender extends View {
     Paint paint1 = new Paint();
     Paint paint = new Paint();
     int y = 0;
  int downspeed=7;
  int upspeed=5;
 
-  public Ballmove(Context context) {
+  public GameRender(Context context) {
         super(context);
         paint1.setColor(Color.BLACK);
         paint1.setStrokeWidth(10f);
