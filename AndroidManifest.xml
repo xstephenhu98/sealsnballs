@@ -31,6 +31,10 @@
             android:name=".ListViewActivity"
             android:label="@string/title_activity_list_view" >
         </activity>
+        <activity
+            android:name=".ScoreCursorAdaptor"
+            android:label="@string/title_activity_score_cursor_adaptor" >
+        </activity>
     </application>
 
 </manifest>
