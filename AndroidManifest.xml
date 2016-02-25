@@ -36,10 +36,10 @@
             android:label="@string/title_activity_score_cursor_adaptor" >
         </activity>
         <activity
-            android:name=".PlayingActivity"
-            android:label="Playing Activity" >
+            android:name=".GameActivity"
+            android:label="Game Activity" >
             <intent-filter >
-                <action android:name="com.example.PlayingActivity"/>
+                <action android:name="com.example.GameActivity"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>

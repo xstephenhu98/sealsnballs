@@ -17,12 +17,15 @@ package com.example.sealsnballs;
 		    @Override
 		    public void onCreate(Bundle savedInstanceState) {
 		        super.onCreate(savedInstanceState);
-
+		        setContentView(R.layout.gameactivity);
+		        
 		       render = new GameRender(this);
 		       render.setBackgroundColor(Color.WHITE);
 		        setContentView(render);
-
-		    }
+		    
+		    }    
+}\
 		}
+		
 	  
 
