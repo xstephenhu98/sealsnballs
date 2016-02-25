@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 	}
 	public void onClick(View view){
-		startActivity(new Intent("com.example.PlayingActivity"));
+		startActivity(new Intent("com.example.GameActivity"));
 	}
 
 }
