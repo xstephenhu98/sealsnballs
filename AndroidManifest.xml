@@ -35,6 +35,14 @@
             android:name=".ScoreCursorAdaptor"
             android:label="@string/title_activity_score_cursor_adaptor" >
         </activity>
+        <activity
+            android:name=".PlayingActivity"
+            android:label="Playing Activity" >
+            <intent-filter >
+                <action android:name="com.example.PlayingActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
