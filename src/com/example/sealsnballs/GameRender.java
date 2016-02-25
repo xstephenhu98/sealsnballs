@@ -22,6 +22,9 @@ public class GameRender extends View {
         
     
     }
+  
+  
+  
 
   public boolean onTouchEvent(MotionEvent touch) {
 		if (y<10) 
@@ -34,10 +37,11 @@ public class GameRender extends View {
     protected void onDraw(Canvas canvas) 
     {canvas.drawPaint(paint);
     paint.setStyle(Paint.Style.FILL);
-    paint.setColor(Color.WHITE);
+    paint.setColor(Color.parseColor("#00BFFF"));
        
       
-       
+    canvas.drawCircle(800, 20, 35, paint);
+    paint.setColor(Color.parseColor("#FFFF00"));
        
       
        canvas.drawCircle(100, y, 35, paint);
