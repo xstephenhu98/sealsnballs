@@ -4,11 +4,10 @@ package com.example.sealsnballs;
 	
 	
 	import android.app.Activity;
-	import android.graphics.Canvas;
+
 	import android.graphics.Color;
-	import android.graphics.Paint;
+
 	import android.os.Bundle;
-	import android.view.View;
 
 		public class GameActivity extends Activity {
 			
@@ -24,8 +23,8 @@ package com.example.sealsnballs;
 		        setContentView(render);
 		    
 		    }    
-}\
-		}
+}
+
 		
 	  
 
