@@ -3,6 +3,7 @@ package com.example.sealsnballs;
 
 import java.util.ArrayList;
 
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,7 +19,8 @@ public class GameRender extends View {
     Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.seal);
     int y = 0;
     ArrayList<Seal> seals = new ArrayList<Seal>();
- int downspeed=7;
+    
+ int downspeed=0;
  int upspeed=5;
 
   public GameRender(Context context) {
@@ -50,16 +52,12 @@ public class GameRender extends View {
     	canvas.drawBitmap(b, s.getX(), s.getY(), paint);
     }
     paint.setStyle(Paint.Style.FILL);
-    paint.setColor(Color.parseColor("#00BFFF"));
-       
-      
-    canvas.drawCircle(800, 20, 35, paint);
+    
     paint.setColor(Color.parseColor("#FFFF00"));
        
-      
        canvas.drawCircle(100, y, 35, paint);
        paint.setColor(Color.parseColor("#CD5C5C"));
-   
+       downspeed+=10;
        y+=downspeed;
        invalidate();
      
