@@ -3,13 +3,13 @@ package com.example.sealsnballs;
 
 import java.util.ArrayList;
 
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.support.v4.app.NotificationCompat;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -68,8 +68,14 @@ public class GameRender extends View {
      
    }
 
-
-
+    public void showScores(){
+    		NotificationCompat.Builder mBuilder =
+		    new NotificationCompat.Builder(this)
+		    .setSmallIcon(R.drawable.notification_icon)
+		    .setContentTitle("My notification")
+		    .setContentText("Hello World!");
+    }
+    
 
 
 
