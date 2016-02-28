@@ -17,8 +17,5 @@ public class MainActivity extends Activity {
 	public void goToGame(View view){
 		startActivity(new Intent(this, GameActivity.class));
 	}
-	public void goToScores(View view){
-		startActivity(new Intent(this, ListViewActivity.class));
-	}
-
+	
 }
