@@ -68,14 +68,7 @@ public class GameRender extends View {
      
    }
 
-    public void showScores(){
-    		NotificationCompat.Builder mBuilder =
-		    new NotificationCompat.Builder(this)
-		    .setSmallIcon(R.drawable.notification_icon)
-		    .setContentTitle("My notification")
-		    .setContentText("Hello World!");
-    }
-    
+   
 
 
 
