@@ -20,8 +20,8 @@ public class GameRender extends View {
     int y = 0;
     ArrayList<Seal> seals = new ArrayList<Seal>();
     
- int downspeed=0;
- int upspeed=5;
+ int speed=0;
+ 
 
   public GameRender(Context context) {
         super(context);
@@ -39,8 +39,11 @@ public class GameRender extends View {
   
 
   public boolean onTouchEvent(MotionEvent touch) {
-		if (y<10) 
-        y+=upspeed;
+		speed = -30;
+		speed+=5;
+		y+=speed;
+        
+		invalidate();
 		return true;
 		
 	}
@@ -57,8 +60,10 @@ public class GameRender extends View {
        
        canvas.drawCircle(100, y, 35, paint);
        paint.setColor(Color.parseColor("#CD5C5C"));
-       downspeed+=10;
-       y+=downspeed;
+       
+       speed+=5;
+       y+=speed;
+      
        invalidate();
      
    }
