@@ -86,6 +86,22 @@ public class DBAdapter {
     {
         return db.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_SCORE}, null, null, null, null, null);
     }
+    public int getHighScore()
+    {
+    	int highscore = 0;
+    	Cursor c = getAllScores();
+    	if(c.moveToFirst()){
+    			if(c.getInt(2)>highscore){
+    					highscore = (c.getInt(2));
+    			}
+    	}
+    	if(c.moveToNext()){
+    		if(c.getInt(2)>highscore){
+    			highscore = (c.getInt(2));
+    		}
+    	}
+    	return highscore;
+    }
 }
     
  
