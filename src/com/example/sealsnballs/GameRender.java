@@ -26,8 +26,7 @@ public class GameRender extends View {
         super(context);
         paint.setColor(Color.BLACK);
         paint.setStrokeWidth(10f);
-        Seal s1 = new Seal(200,800,1,false);
-        seals.add(s1);
+       
         //setBackgroundResource(R.drawable.cscbackground);  this didn't work
         
         
