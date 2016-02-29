@@ -8,5 +8,8 @@
     <string name="title_activity_list_view">ListViewActivity</string>
     <string name="title_activity_score_cursor_adaptor">ScoreCursorAdaptor</string>
     <string name="title_activity_popup_window">PopupWindow</string>
+    <string name="gameover">Game Over!</string>
+    <string name="recentscore">Your Score:</string>
+    <string name="highscore">Your HighScore:</string>
 
 </resources>
