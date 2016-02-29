@@ -22,7 +22,6 @@ import android.os.Bundle;
 		       render.setBackgroundColor(Color.WHITE);
 		        setContentView(render);
 		        
-		        genSeals seals = new genSeals();
 		        Timer timer = new Timer();
 		        
 		        timer.scheduleAtFixedRate(new TimerTask(){
