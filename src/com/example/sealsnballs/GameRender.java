@@ -9,12 +9,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.support.v4.app.NotificationCompat;
 import android.view.MotionEvent;
 import android.view.View;
 
 public class GameRender extends View {
-	
+	Canvas canvas;
     Paint paint = new Paint();
     Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.seal);
     int y = 0;
@@ -29,7 +28,7 @@ public class GameRender extends View {
         paint.setStrokeWidth(10f);
         Seal s1 = new Seal(200,800,1,false);
         seals.add(s1);
-        setBackgroundResource(R.drawable.cscbackground);
+        //setBackgroundResource(R.drawable.cscbackground);  this didn't work
         
         
         
@@ -49,7 +48,7 @@ public class GameRender extends View {
 		
 	}
 
-  
+  	
     protected void onDraw(Canvas canvas) 
     {canvas.drawPaint(paint);
     for (Seal s : seals){
@@ -70,10 +69,7 @@ public class GameRender extends View {
      
    }
 
-   
-
-
-
+  
 
 
 }

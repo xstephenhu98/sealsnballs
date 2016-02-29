@@ -3,11 +3,11 @@ package com.example.sealsnballs;
 
 	
 	
-	import android.app.Activity;
+	import java.util.Timer;
 
-	import android.graphics.Color;
-
-	import android.os.Bundle;
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
 
 		public class GameActivity extends Activity {
 			
@@ -20,6 +20,11 @@ package com.example.sealsnballs;
 		       render = new GameRender(this);
 		       render.setBackgroundColor(Color.WHITE);
 		        setContentView(render);
+		        
+		        genSeals seals = new genSeals();
+		        Timer timer = new Timer();
+		        
+		        timer.scheduleAtFixedRate(new genSeals(), 500,500);
 		    
 		    }    
 }
