@@ -2,6 +2,8 @@ package com.example.sealsnballs;
 
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -26,10 +28,31 @@ public class GameRender extends View {
         super(context);
         paint.setColor(Color.BLACK);
         paint.setStrokeWidth(10f);
-       
+        
         //setBackgroundResource(R.drawable.cscbackground);  this didn't work
         
+        Timer timer = new Timer();
         
+        timer.scheduleAtFixedRate(new TimerTask(){
+        	public void run(){
+        	int rand = (int)Math.ceil(Math.random()*6);
+        	
+        	if(rand == 1){
+        		Seal seal= new Seal(600,800,1,false);
+        		seals.add(seal);
+        	}
+        		for(int i=0;i<seals.size();i++){
+        			Seal s = seals.get(i);
+        			int curX = s.getX();
+        			curX -= 30;
+        			s.setX(curX);
+        			
+        			invalidate();
+        		}
+        	}
+        	
+        }, 
+        		500,100);
         
     
     }

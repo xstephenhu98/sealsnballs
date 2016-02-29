@@ -103,10 +103,10 @@ public class DBAdapter {
     	return highscore;
     }
     
-    public Cursor getHighScores(){
+   /* public Cursor getHighScores(){
     	
     	
-    }
+    }*/
 }
     
  
