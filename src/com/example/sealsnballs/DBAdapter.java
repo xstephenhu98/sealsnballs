@@ -103,10 +103,10 @@ public class DBAdapter {
     	return highscore;
     }
     
-   /* public Cursor getHighScores(){
+   public Cursor getHighScores(){
+	   return db.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_SCORE}, "order by score desc limit 10", null, null, null, null);
     	
-    	
-    }*/
+    }
 }
     
  
