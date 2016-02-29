@@ -5,8 +5,14 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import com.example.sealsnballs.DBAdapter;
+import com.example.sealsnballs.R;
 
 public class PopupWindow extends Activity {
+	
+	DBAdapter db = new DBAdapter(this);
+	GameActivity gm = new GameActivity();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +26,8 @@ public class PopupWindow extends Activity {
 		int height = (int)Math.ceil(dm.heightPixels*(.8));
 		
 		getWindow().setLayout(width, height);
+		
+		displayScores();
 	}
 
 	@Override
@@ -39,5 +47,17 @@ public class PopupWindow extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void displayScores(){
+		int max = db.getHighScore();
+		int recent = 0;
+				//gm.score(); - once we have a way to get the score from the game.
+		
+		TextView highScore = (TextView)findViewById(R.id.textView5);
+		TextView recentScore = (TextView)findViewById(R.id.textView3);
+		
+		highScore.setText(max);
+		recentScore.setText(recent);
 	}
 }
