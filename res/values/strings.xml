@@ -11,5 +11,6 @@
     <string name="gameover">Game Over!</string>
     <string name="recentscore">Your Score:</string>
     <string name="highscore">Your HighScore:</string>
+    <string name="tomain">Main Menu</string>
 
 </resources>

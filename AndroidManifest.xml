@@ -46,8 +46,12 @@
         </activity>
         <activity
             android:name=".PopupWindow"
-            android:theme="@style/AppTheme.CustomTheme"
-            android:label="@string/title_activity_popup_window" >
+            android:label="@string/title_activity_popup_window"
+            android:theme="@style/AppTheme.CustomTheme" >
+        </activity>
+        <activity
+            android:name=".ListView"
+            android:label="@string/title_activity_list_view" >
         </activity>
     </application>
 
