@@ -29,6 +29,7 @@ public class GameRender extends View {
         paint.setStrokeWidth(10f);
         Seal s1 = new Seal(200,800,1,false);
         seals.add(s1);
+        setBackgroundResource(R.drawable.cscbackground);
         
         
         
@@ -59,6 +60,7 @@ public class GameRender extends View {
     paint.setColor(Color.parseColor("#FFFF00"));
        
        canvas.drawCircle(100, y, 35, paint);
+       
        paint.setColor(Color.parseColor("#CD5C5C"));
        
        speed+=5;
