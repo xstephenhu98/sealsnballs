@@ -86,9 +86,9 @@ public class GameRender extends View {
   		return isOver;
   	}
   	
-  	/*public int returnScore(){
+  	public int returnScore(){
   		return score;
-  	}*/
+  	}
   	
   	protected void onDraw(Canvas canvas) 
     {canvas.drawPaint(paint);
@@ -113,7 +113,7 @@ public class GameRender extends View {
        	}
        }
        
-	   if (y>=850) {
+	   if (y>=950) {
 		   isOver = true;
 		   //Log.d("", "message");
 	   }
