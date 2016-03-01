@@ -18,7 +18,7 @@ public class ListView extends ListActivity {
 		setContentView(R.layout.activity_list_view);
 		
 		db.open();
-		Cursor allcontacts = db.getHighScores();
+		Cursor allcontacts = db.getAllScores();
 		ScoreAdapter = new ScoreCursorAdaptor(this, allcontacts, 0);
 		
 		android.widget.ListView listView = getListView();

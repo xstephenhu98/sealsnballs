@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
-        android:text="HIGH SCORES"
+        android:text="SEE ALL PAST SCORES"
         android:onClick="goToScores" />
 
 </LinearLayout>
