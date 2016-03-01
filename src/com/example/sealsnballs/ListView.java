@@ -27,7 +27,7 @@ public class ListView extends ListActivity {
 		listView.setAdapter(ScoreAdapter);
 		
 
-
+		
 	}
 	
 	public void toMainMenu(View view){
