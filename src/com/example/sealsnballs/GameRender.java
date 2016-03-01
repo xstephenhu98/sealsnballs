@@ -36,9 +36,10 @@ public class GameRender extends View {
         timer.scheduleAtFixedRate(new TimerTask(){
         	public void run(){
         	int rand = (int)Math.ceil(Math.random()*6);
+        	int value = (int)Math.ceil(Math.random()*5);
         	
         	if(rand == 1){
-        		Seal seal= new Seal(600,800,1,false);
+        		Seal seal= new Seal(600,800,value,false);
         		seals.add(seal);
         	}
         		for(int i=0;i<seals.size();i++){
