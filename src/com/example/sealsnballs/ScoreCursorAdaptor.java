@@ -29,7 +29,7 @@ public class ScoreCursorAdaptor extends CursorAdapter {
 	      // Find fields to populate in inflated template
 	      TextView nameEntry = (TextView) view.findViewById(R.id.name_entry);
 	      // Extract properties from cursor
-	      String body = cursor.getString(cursor.getColumnIndexOrThrow("name"));
+	      String body = cursor.getString(cursor.getColumnIndexOrThrow("score"));
 	      
 	      // Populate fields with extracted properties
 	      nameEntry.setText(body);

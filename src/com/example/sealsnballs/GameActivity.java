@@ -13,7 +13,7 @@ import android.view.View;
 			
 		    GameRender render;
 		    DBAdapter db = new DBAdapter(this);
-		    int score = render.returnScore();
+		   
 		    
 
 		    @Override
@@ -24,16 +24,18 @@ import android.view.View;
 		       render.setBackgroundColor(Color.WHITE);
 		        setContentView(render);
 		        
+		        endGame();
 		        
 		        
-		       if(render.gameOver() == true){
-		    	   	db.insertScore(score);
+		    }  
+		    
+		    public void endGame(){
+		    	if(render.gameOver() == true){
+		    		int score = render.returnScore();
+		    		db.insertScore(score);
 		    		startActivity(new Intent(this, PopupWindow.class));
 		    	}
-		    
-		    }    
-		    
-		    
+		    }
 }
 
 		
