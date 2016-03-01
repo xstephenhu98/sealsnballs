@@ -89,12 +89,9 @@ public class GameRender extends View {
   		return score;
   	}
   	
-    protected void onDraw(Canvas canvas) 
+  	protected void onDraw(Canvas canvas) 
     {canvas.drawPaint(paint);
-    for (int i=0;i<seals.size();i++){
-    	Seal s = seals.get(i);
-    	canvas.drawBitmap(b, s.getX(), s.getY(), paint);
-    }
+    
     paint.setStyle(Paint.Style.FILL);
     
     paint.setColor(Color.parseColor("#FFFF00"));
@@ -106,9 +103,18 @@ public class GameRender extends View {
        speed+=5;
        y+=speed;
       
+       for (int i=0;i<seals.size();i++){
+       	Seal s = seals.get(i);
+       	canvas.drawBitmap(b, s.getX(), s.getY(), paint);
+       	if (y >= s.getY()){
+       		s.setHitStatus(true);
+       		score+=s.getVal();
+       	}
+       }
        invalidate();
      
    }
+
 
   
 
