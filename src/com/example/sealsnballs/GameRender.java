@@ -35,7 +35,7 @@ public class GameRender extends View {
         
         timer.scheduleAtFixedRate(new TimerTask(){
         	public void run(){
-        	int rand = (int)Math.ceil(Math.random()*6);
+        	int rand = (int)Math.ceil(Math.random()*12);
         	int value = (int)Math.ceil(Math.random()*5);
         	
         	if(rand == 1){
@@ -55,7 +55,7 @@ public class GameRender extends View {
         	}
         	
         }, 
-        		500,100);
+        		500,50);
 		invalidate();
         
     
