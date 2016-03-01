@@ -45,10 +45,10 @@ import android.util.Log;
 		    public void endGame(){
 		    	if(render.getGameOverStatus() == true){
 		    		int score = render.returnScore();
-		    		//db.insertScore(score);
+		    		db.insertScore(score);
 		    		startActivity(new Intent(this, PopupWindow.class));
-		    		Log.d("", "true");
-		    		Log.d("score", ""+score);
+		    		//Log.d("", "true");
+		    		//Log.d("score", ""+score);
 		    	}
 		    }
 }
