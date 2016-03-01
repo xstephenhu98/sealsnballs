@@ -6,6 +6,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -15,6 +16,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 public class GameRender extends View {
+	int score = 0;
 	Canvas canvas;
     Paint paint = new Paint();
     Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.seal);
@@ -51,13 +53,18 @@ public class GameRender extends View {
 
         		}
         		
+        		if(y>=850){
+        			gameOver();
+        			
+        		}
         		
         	}
         	
         }, 
         		500,50);
 		invalidate();
-        
+		
+		
     
     }
   
@@ -74,7 +81,9 @@ public class GameRender extends View {
 		
 	}
 
-  	
+  	public boolean gameOver(){
+  		return true;
+  	}
     protected void onDraw(Canvas canvas) 
     {canvas.drawPaint(paint);
     for (int i=0;i<seals.size();i++){

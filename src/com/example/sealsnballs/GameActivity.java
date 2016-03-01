@@ -12,6 +12,9 @@ import android.view.View;
 		public class GameActivity extends Activity {
 			
 		    GameRender render;
+		    DBAdapter db = new DBAdapter(this);
+		    int score = render.score;
+		    
 
 		    @Override
 		    public void onCreate(Bundle savedInstanceState) {
@@ -21,7 +24,12 @@ import android.view.View;
 		       render.setBackgroundColor(Color.WHITE);
 		        setContentView(render);
 		        
-		       
+		        
+		        
+		       if(render.gameOver() == true){
+		    	   	db.insertScore(score);
+		    		startActivity(new Intent(this, PopupWindow.class));
+		    	}
 		    
 		    }    
 		    
