@@ -30,7 +30,7 @@ import android.view.View;
 		    }  
 		    
 		    public void endGame(){
-		    	if(render.gameOver() == true){
+		    	if(render.getGameOverStatus() == true){
 		    		//int score = render.returnScore();
 		    		//db.insertScore(score);
 		    		startActivity(new Intent(this, MainActivity.class));

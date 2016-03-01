@@ -22,6 +22,7 @@ public class GameRender extends View {
     Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.seal);
     int y = 0;
     ArrayList<Seal> seals = new ArrayList<Seal>();
+    boolean isOver = false;
     
  int speed=0;
  
@@ -53,7 +54,7 @@ public class GameRender extends View {
 
         		}
         		
-        			gameOver();
+        			
         			
         		
         		
@@ -80,11 +81,8 @@ public class GameRender extends View {
 		
 	}
 
-  	public boolean gameOver(){
-  		//if(y>=150){
-  			return true;
-  		//}
-  		//return false;
+  	public boolean getGameOverStatus(){
+  		return isOver;
   	}
   	
   	/*public int returnScore(){
@@ -113,6 +111,12 @@ public class GameRender extends View {
        		score+=s.getVal();
        	}
        }
+       
+	   if (y>=850) {
+		   isOver = true;
+	   }
+    	   
+       
        invalidate();
      
    }
