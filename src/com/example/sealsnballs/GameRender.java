@@ -53,10 +53,9 @@ public class GameRender extends View {
 
         		}
         		
-        		if(y>=850){
         			gameOver();
         			
-        		}
+        		
         		
         	}
         	
@@ -82,12 +81,15 @@ public class GameRender extends View {
 	}
 
   	public boolean gameOver(){
-  		return true;
+  		//if(y>=150){
+  			return true;
+  		//}
+  		//return false;
   	}
   	
-  	public int returnScore(){
+  	/*public int returnScore(){
   		return score;
-  	}
+  	}*/
   	
   	protected void onDraw(Canvas canvas) 
     {canvas.drawPaint(paint);

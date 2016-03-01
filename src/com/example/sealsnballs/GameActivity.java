@@ -31,9 +31,10 @@ import android.view.View;
 		    
 		    public void endGame(){
 		    	if(render.gameOver() == true){
-		    		int score = render.returnScore();
-		    		db.insertScore(score);
-		    		startActivity(new Intent(this, PopupWindow.class));
+		    		//int score = render.returnScore();
+		    		//db.insertScore(score);
+		    		startActivity(new Intent(this, MainActivity.class));
+		    		
 		    	}
 		    }
 }
