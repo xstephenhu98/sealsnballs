@@ -3,7 +3,7 @@ package com.example.sealsnballs;
 
 	
 	
-	import android.app.Activity;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.view.View;
 			
 		    GameRender render;
 		    DBAdapter db = new DBAdapter(this);
-		    int score = render.score;
+		    int score = render.returnScore();
 		    
 
 		    @Override

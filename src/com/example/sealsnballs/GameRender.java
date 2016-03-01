@@ -84,6 +84,10 @@ public class GameRender extends View {
   	public boolean gameOver(){
   		return true;
   	}
+  	
+  	public int returnScore(){
+  		return score;
+  	}
     protected void onDraw(Canvas canvas) 
     {canvas.drawPaint(paint);
     for (int i=0;i<seals.size();i++){
